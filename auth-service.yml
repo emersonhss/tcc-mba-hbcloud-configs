@@ -26,17 +26,20 @@ security:
 spring:
     datasource:
         driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/hbcloud
         username: hbcloud
         password: 'hbcloud00'
-        url: jdbc:postgresql://localhost:5432/hbcloud
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL9Dialect
         generate-ddl: false
         hibernate:
             ddl-auto: none
         show-sql: true
-
-flyway:
-    enabled: true
+    
+    flyway:
+        enabled: true
+        url: jdbc:postgresql://localhost:5432/hbcloud
+        user: hbcloud
+        password: 'hbcloud00'
  
  
